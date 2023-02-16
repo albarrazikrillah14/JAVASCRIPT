@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Object
+        //static method
+        //Object.freeze() object dan atribut tidak dapat diubah
+
+        //Object.seal() value masih bisa diubah, object tidak dapat dihapus
+
+
+        const person = {
+            nama: "Albarra Zikrillah",
+            umur: 20
+        }
+        Object.freeze(person);
+        person.nama = "Zikrillah Albarra";
+        delete person;
+        console.info(person);
+
+        //mengganbungkan 2 objek
+        //Object.assign(targer, source); 
+        const target = { firstname : "Albarra Zikrillah"};
+        const source = {lastName: "Zikrillah"};
+        Object.assign(target, source);
+        console.info(target);
+
+
+        //Object property dan value
+        {
+            const person = {
+                firstName: "Albarra",
+                lastName: "Zikrillah"
+            };
+            console.info(Object.values(person));
+            console.info(Object.getOwnPropertyNames(person));
+        }
+    </script>
+</body>
+</html>

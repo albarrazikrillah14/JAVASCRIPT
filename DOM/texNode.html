@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    TEXT NODE MERUPAKAN TEXT TANPA TAG
+
+    <script>
+        const textNode = document.body.firstChild;
+        console.info(textNode.wholeText);
+
+        //create textNode
+
+        const data = document.createTextNode("Albarra Zikrillah");
+
+        document.body.appendChild(data);
+    </script>
+</body>
+</html>

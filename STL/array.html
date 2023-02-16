@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //loop forEach
+
+        const data = ["Albarra", "Zikrillah"];
+        data.forEach(function(value,index){
+            console.info(`${index} ${value}`)
+        });
+
+
+        //queue
+        //first in first out
+        const queue = [];
+        queue.push("Albarra");
+        queue.push("Zikrillah"); // menanbahkan data
+        console.info(queue);
+        queue.shift(); // menghapus data pertama
+        console.info(queue);
+
+        //stack
+        //last in first out
+        const stack = [];
+        stack.push("Albarra");
+        stack.push("Zikrillah");
+        console.info(stack);
+        console.info(stack.pop());
+
+        //searching
+        const source = [1, 2, 3, 4, ,5, 1, 2, 3, 4, 5];
+        console.info(source.find(value => value > 3)); // cari value dimana value > 3
+        console.info(source.findIndex(value => value > 3));
+        console.info(source.includes(7));
+        console.info(source.lastIndexOf(5));
+        console.info(source.indexOf(5));
+
+        //array Filter
+        //menciptakan array baru
+
+        const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        console.info(number.filter(value => value %2 == 1));
+
+        //array transfoorm
+        const names = "Albarra Zikrillah".split(" ");
+        const namesUpper = names.map(value => value.toUpperCase());
+        console.info(namesUpper);
+
+        const nameReduce = names.reduce((before, value) =>  before + " " + value);
+        console.info(nameReduce);
+
+        const counting = number.reduce((before, value) => before + value);
+        console.info(counting);
+    </script>
+</body>
+</html>

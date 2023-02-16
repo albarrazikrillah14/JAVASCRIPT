@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atribut</title>
+</head>
+<body>
+    <img id="foto" src="tes tes ajah" alt="foto ngab jikri">
+    <img id="tambah">
+    <script>
+        //name dan value
+        const foto = document.getElementById("foto");
+        console.info(foto);
+
+        const src = foto.getAttributeNode("src");
+
+        console.info(src.name);
+        console.info(src.value);
+
+        console.info(foto.getAttribute("src")); //langsung mendapatkan value dari src
+
+        //menambahkan attribut
+        {
+            const tambah = document.getElementById("tambah");
+            const src = document.createAttribute("src");
+            src.value = "https://www.programmerzamannow.com/img/pzn.png";
+            // tambah.setAttributeNode(src);
+
+            tambah.setAttribute("src","https://www.programmerzamannow.com/img/pzn.png");
+        }
+    </script>
+</body>
+</html>

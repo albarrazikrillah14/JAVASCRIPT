@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        {
+        const data = ["Albarra", "Zikrillah", 20, "Belajar", "sawo matang"];
+        
+        // const [namaDepan, namaBelakang] = data;
+        // console.info(namaDepan);
+        // console.info(namaBelakang);
+        
+        //bisa menyimpan sisa dari array ke dalam array
+        const[namaDepan = "ngab", namaBelakang, ...arr] = data;
+        console.table(arr);
+        }
+
+        const dataObj = {
+            fullName: "Albarra Zikrillah",
+            kota: "Solok",
+            jalan: "jalan jalan",
+            hobby: {
+                satu: "berselancar",
+                dua: "memantulkan bola"
+            },
+            ukuranSepatu: 44,
+            tinggiBadan: 172
+        };
+
+        const {fullName, kota, jalan, hobby:{satu, dua}, ...other} = dataObj;
+        console.info(fullName);
+        console.info(satu);
+
+        // dapat berlaku juga untuk paramter pada fungsi
+    </script>
+</body>
+</html>

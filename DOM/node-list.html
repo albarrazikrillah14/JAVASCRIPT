@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu1">
+        <li>first</li>
+        <li>second</li>
+        <li>third</li>
+    </ul>
+    <ul id="menu2">
+        <li>Ngab</li>
+        <li>Albarra</li>
+        <li>Zikrillah</li>
+    </ul>
+
+    <script>
+        //node list merupakan kumpulan node
+        //document.querySelectorAll("li") mengambil semuanya yang memilki tag li
+        const list = document.querySelectorAll("li");
+        console.info(list);
+
+        const menu1 = document.getElementById("menu1").childNodes; //live 
+
+        const menu2 = document.getElementById("menu2").childNodes;
+
+        console.info(menu1);
+        console.info(menu2);
+    </script>
+</body>
+</html>

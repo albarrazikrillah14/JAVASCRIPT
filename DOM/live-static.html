@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="menu">
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <script>
+        let list = document.querySelectorAll("li");
+        console.info(list);
+
+        const menu = document.getElementById("menu");
+        menu.appendChild(document.createElement("li"));
+        menu.appendChild(document.createElement("li"));
+        menu.appendChild(document.createElement("li"));
+
+        console.info(list); // belum bertambah / static
+
+        list = document.querySelectorAll("li");
+        console.info(list);
+        //sudah bertambah dengan melakukan select kembali
+    </script>
+</body>
+</html>

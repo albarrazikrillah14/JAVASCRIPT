@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const input = "12345";
+        const number = Number(input);
+
+        console.info(typeof input);
+        console.info(typeof number);
+        console.info(input);
+        console.info(number);
+        console.info(Number("true")); // NaN = not a number
+        console.info(Number.isNaN(input));
+        console.info(Number.isInteger(number));
+
+        console.info(number.toString(2));//biner
+
+        console.info(number.toLocaleString("id-ID")); //tata bahasa indo
+    </script>
+</body>
+</html>

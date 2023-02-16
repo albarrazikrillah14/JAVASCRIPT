@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengirim Data</title>
+</head>
+<body>
+    <form>
+        <label for="username">
+            Username: <input type="text" id="username" name="username">
+        </label>
+        <br>
+        <label for="password">
+            Password: <input type="password" name="password" id="password">
+        </label>
+        <br>
+        <input type="button" id="login" value="Login">
+    </form>
+    <h1 id="response"></h1>
+    <script>
+        function doLogin() {
+            const request = new Request("https://eosuqk3hz19nikn.m.pipedream.net", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify({
+                    username: document.getElementById("username").value,
+                    password: document.getElementById("password").value
+                })
+            });
+            const response = fetch(request);
+            response
+                    .then(function(response) {
+                    return response.json();
+                    })
+                    .then(function(json) {
+                        document.getElementById("response").textContent = json.about;
+                    })
+                    .catch(function(){
+                        console.info(`gagal cok`);
+                    })
+                    .finally(function() {
+                        console.info('Berhasil');
+                    })
+        }
+        document.getElementById("login").onclick = doLogin;
+    </script>
+</body>
+</html>

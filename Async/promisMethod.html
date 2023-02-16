@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promise</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>id: </td>
+            <td id="id"></td>
+        </tr>
+        <tr>
+            <td>name: </td>
+            <td id="name"></td>
+        </tr>
+        <tr>
+            <td>price :</td>
+            <td id="price"></td>
+        </tr>
+    </table>
+    <script>
+       function getProduct() {
+        return new Promise(function(resolve, reject) {
+            const ajax = new XMLHttpRequest();
+            ajax.open("GET", 'api/product.json');
+            ajax.onload = function() {
+                if(ajax.status == 200) {
+                    resolve(JSON.parse(ajax.responseText));
+                }
+                else {
+                    reject(ajax.status);
+                }
+            }
+            ajax.send();
+        });
+       }
+       getProduct().then(function(response) {
+            const id = document.getElementById("id");
+            const name = document.getElementById("name");
+            const price = document.getElementById("price");
+
+            id.textContent = response.id;
+            name.textContent = response.name;
+            price.textContent = response.price;
+       })
+       .catch(function(error) {
+            console.info(`Terjadi Error ${error}`);
+       })
+       .finally(function() {
+        console.info('Sukses coi');
+       })
+
+    </script>
+</body>
+</html>

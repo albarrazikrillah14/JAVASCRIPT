@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function(name) {
+                console.info(`Halo mas ${name}`);
+            }
+        }
+        const albarra = new Person("ngab", "Albarra");
+        const zikrillah = new Person("Ngab", "Zikrillah");
+        console.info(albarra);
+
+        Person.prototype.posisi = function(pekerjaan) {
+            console.info(`Pekerjaan ngab ${this.firstName} adalah ${pekerjaan} handal gais.`);
+        }
+        console.info(albarra);
+        albarra.posisi("gimerz");
+
+        //cara menwariskan prototype dengan benar
+
+        function Employee(firstName) {
+
+        }
+        function Manager(lastName) {
+
+        }
+        Manager.prototype = create(Employee.prototype);
+    </script>
+</body>
+</html>

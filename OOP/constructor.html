@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object
+        const data = {
+            firstName: "Albarra",
+            lastName: "Zikrillah"
+        }
+        //constructor function
+        //biasanya uppercase diawal
+        function Person() {
+            this.firstName = "";
+            this.lastName = "";
+        }
+        //membuat object menggunakan new
+        const zikri = new Person();
+        zikri.firstName = "Albarra";
+        console.info(zikri);
+
+
+        //method atau fungsi
+        function Orang(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.sayHello = function(name) {
+                console.info(`Hello Ngab ${name}`);
+            }
+        }
+        const ngab = new Orang("Albarra", "Zikrillah");
+        ngab.sayHello("Zikri");
+
+        //pewarisan
+        function Employee(firstName) {
+            this.firstName = firstName;
+            this.Hello = function(name) {
+                console.info(`Halo ${name}`);
+            }
+        }
+
+        function Manager (firstName, lastName) {
+            this.lastName = lastName;
+            /*
+            untuk pewarisan dari employee ke Mananger
+            semua object yang ada di Employee di copy pada Manager
+            paramamter this bertujuan untuk memberi tahu lokasi tempat menyalin object Employee
+            dan setelahnya menjadi paramater yang dibutuhkan oleh Employee sendiri
+            */
+            Employee.call(this, firstName); 
+        }
+        const jikri = new Manager("Albarra", "Zikrillah");
+        console.info(jikri);
+
+    </script>
+</body>
+</html>

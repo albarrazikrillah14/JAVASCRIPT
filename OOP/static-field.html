@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Config {
+            static name = "Albarra ZIkrillah";
+            
+            static sum(...num) {
+                let total = 0;
+                for(const number of num) 
+                    total += number;
+                return total;
+            }
+        }
+        const data = new Config();
+        console.info(data);
+        //untuk memanggil instance static langsung memanggil dari kelas
+        //menjadi variable global
+        // langsung panggil dari kelas
+        console.info(Config.name);
+        console.info(Config.sum(1, 2, 3, 4, 5));
+    </script>
+</body>
+</html>

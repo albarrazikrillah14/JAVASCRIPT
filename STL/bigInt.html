@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //dapat membuat angkat lebih dari Number.MAX_SAFE_INTEGER
+
+        const bigInt = BigInt("123389038503849023844234423");
+        console.info(bigInt);
+
+        const max1 = Number.MAX_SAFE_INTEGER;
+        const max2 = Number.MAX_SAFE_INTEGER;
+        console.info(BigInt(max1 + max2));
+    </script>
+</body>
+</html>

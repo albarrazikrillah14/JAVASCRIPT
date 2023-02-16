@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="content">
+        <script>
+            console.info("Hello World");
+        </script>
+        <strong>Albarra Zikrillah</strong> <i>Albarra Zikrillah</i>
+    </p>
+
+    <script>
+        const content = document.getElementById("content");
+        console.info(content);
+
+        console.info(content.textContent);
+        console.info(content.innerText); // mengambil data data yang akan di render oleh web
+        console.info(content.innerHTML); //mengambil isi tag dari content
+
+        // content.textContent = "<p> lagi Belajar DOM</p>"; //tag p tidak dieksekusi
+
+        // content.innerText = "<p> lagi Belajar DOM</p>"; // sama seperti textContent
+
+        content.innerHTML = "<p> lagi Belajar DOM</p>"; // dirender oleh web
+    </script>
+</body>
+</html>

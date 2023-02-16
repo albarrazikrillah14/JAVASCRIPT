@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Bank {
+           #customerName;
+           #customerId;
+           #balance = 0;
+           #prevTrans;
+           constructor(customerName, customerId) {
+            this.#customerName = customerName;
+            this.#customerId = customerId;
+           } 
+           deposit(amount) {
+                if(amount != 0) {
+                    this.#balance += amount;
+                    this.#prevTrans = amount;
+                }
+           }
+           withdraw(amount) {
+                if(amount != 0 && amount <= this.#balance) {
+                    this.#balance -= amount;
+                    this.#prevTrans -= amount;
+                }else if(amount != 0 && amount > this.#balance) {
+                    console.info(`Gak bisa coi`);
+                }
+           }
+           getPrevTrans() {
+                if(this.#prevTrans > 0) {
+                    console.info(`Deposited ${this.#prevTrans}`);
+                }else if(this.$prevTrans < 0) {
+                    console.info('withdrawn ${-1 * this.#prevTrans}');
+                }else{
+                    console.info(`no transfer occured`);
+                }
+           }
+        }
+        const data = new Bank("Albarra Zikrillah", "123XYZ");
+        data.deposit(1000);
+        data.getPrevTrans();
+        data.withdraw(2000);
+    </script>
+</body>
+</html>

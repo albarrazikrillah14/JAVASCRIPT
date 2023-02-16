@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // fungsi pada Manager akan dicek terlebih dahlu
+        // apakah fungsinya ada di object Manager
+        // jika ada maka jalankan yang ada di manager
+        // selainnya jalankan yang ada di employee
+        class Employee {
+            sayHello(name) {
+                console.info(`Halo ngab Employee ${name}`);
+            }
+        }
+        class Manager extends Employee {
+            sayHello(name) {
+                console.info(`Halo ngab Manager ${name}`);
+            }
+        }
+        const albarra = new Employee();
+        const zikrillah = new Manager();
+        albarra.sayHello("albarra");
+        zikrillah.sayHello("zikrillah");
+    </script>
+</body>
+</html>

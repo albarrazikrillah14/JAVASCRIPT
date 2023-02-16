@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Tes</h1>
+    <p id="description" class="coi"></p>
+    <div class="list">
+        <ul>
+            <li>tes</li>
+            <li>tes</li>
+            <li>tes</li>
+        </ul>
+    </div>
+    <div id="tambah-object"></div>
+    <script>
+        //element parentnya adalah node
+        const title = document.getElementById("title");
+        title.textContent = "Albarra Zikrillah lagi belajar DOM"; // ganti judul
+
+        const desc = document.getElementById("description");
+        desc.textContent = "AHAYY";
+
+        console.info(desc.tagName);
+        console.info(desc.id);
+        console.info(desc.className);
+
+        const coi = document.getElementsByClassName("coi");
+        console.info(coi);
+        desc.remove();
+
+        //create element
+        const judul = document.createElement("h2");
+        judul.textContent = "input element  menggunakan javascript";
+        console.info(judul);
+        const tambah = document.getElementById("tambah-object");
+        console.info(tambah);
+        tambah.appendChild(judul);
+    </script>
+</body>
+</html>

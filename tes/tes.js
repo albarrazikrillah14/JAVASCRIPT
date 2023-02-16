@@ -1,0 +1,1 @@
+import * as  nilai from "./tes2.js";

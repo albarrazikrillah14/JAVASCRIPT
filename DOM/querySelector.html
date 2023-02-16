@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>paragraph</p>
+    <ul>
+        <li class="menu">satu</li>
+        <li class="menu">dua</li>
+        <li id = "test">tiga</li>
+        <li>empat</li>
+        <li>lima</li>
+    </ul>
+
+    <div class="test"></div>
+    <div class="testTest"></div>
+    <div class="mengtest"></div>
+    <script>
+        const elements = document.querySelectorAll("*");
+        console.info(elements);
+
+        const list = document.querySelectorAll("li");
+        console.info(list);
+
+        console.info(document.querySelectorAll(".menu")); // li.menu
+
+        //id selector menggunakan #
+        console.info(document.querySelector("#test"));
+
+
+        //selector atribut
+        console.info(document.querySelectorAll("div[class=test]"));
+    </script>
+</body>
+</html>

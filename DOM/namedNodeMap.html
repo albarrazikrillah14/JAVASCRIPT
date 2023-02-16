@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="gambar" src="#" alt="gambar jikri" width="100%">
+    <script>
+        const data = document.getElementById("gambar");
+        const attribute = data.attributes;
+        console.info(attribute);
+        for (const att of attribute) {
+            console.info(`${att.name}: ${att.value}`);
+        }
+    </script>
+</body>
+</html>
